@@ -67,7 +67,6 @@ const userBinding = require('graphql-binding-users')
 userBinding.mutation.createUser({
   name: 'Alice'
 }, `{ id }`)
-  .then(result => result.json())
   .then({ id } => console.log(`The ID of the created user is: ${id}`))
 ```
 
@@ -93,7 +92,6 @@ const userBinding = require('graphql-binding-users')
 
 // Retrieve all `User`s
 userBinding.users({}, `{ id name }`)
-  .then(result => result.json())
   .then(users => console.log(`Retrieved all users: ${users}`))
 ```
 
